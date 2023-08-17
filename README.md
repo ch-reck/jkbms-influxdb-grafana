@@ -23,3 +23,6 @@ The following is working perfectly now for months:
      - [dashboard](grafana_jkbms_battery.json) to display the battery values
 
 The three example configuration files are linked in this git repository for re-use.
+
+Screenshot:
+![grafana dashboard JKBMS battery value display](GrafanaDashboard_JKBMS_Batteries.png)
