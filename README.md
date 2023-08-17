@@ -5,6 +5,12 @@ The following is working perfectly now for months:
   1. jkbms from [dbus-serialbattery](https://github.com/Louisvdw/dbus-serialbattery)
      - configured to read from bluetooth
      - writing output to MQTT
+  1. Optional, if jkbms is not statted as a daemon
+     - crontab to read two separate JK BMS usng a script:
+     
+     `*/2    *  *  *  *   /root/bin/read_jkbms.sh 2>&1 >> /var/log/read_jkbms.log`
+
+     see [read_jkbms.sh](read_jkbms.sh) (insert your JKBMS BT MAC addresses)
   1. [telegraf](https://www.influxdata.com/time-series-platform/telegraf/)
      - reading MQTT
      - selecting the relevant keys
