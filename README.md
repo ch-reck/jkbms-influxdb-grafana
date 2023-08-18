@@ -2,7 +2,7 @@
 Howto visualize JK BMS values in grafana
 
 The following is working perfectly now for months:
-  1. jkbms from [dbus-serialbattery](https://github.com/Louisvdw/dbus-serialbattery)
+  1. jkbms from https://github.com/jblance/mpp-solar
      - configured to read from bluetooth
      - writing output to MQTT
   1. Optional, if jkbms is not statted as a daemon
