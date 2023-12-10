@@ -1,12 +1,12 @@
 # jkbms-influxdb-grafana
 Howto visualize JK BMS values in grafana
 
-The following is working perfectly now for months:
+The following has been working perfectly now for months:
   1. jkbms from https://github.com/jblance/mpp-solar
      - configured to read from bluetooth
      - writing output to MQTT
-  1. Optional, if jkbms is not statted as a daemon
-     - crontab to read two separate JK BMS usng a script:
+  1. Optional, if jkbms is not started as a daemon
+     - crontab to read two separate JK BMS using a script:
      
      `*/2    *  *  *  *   /root/bin/read_jkbms.sh 2>&1 >> /var/log/read_jkbms.log`
 
@@ -18,8 +18,8 @@ The following is working perfectly now for months:
      - writing the values to influxdb v2
   1. [influxdb](https://www.influxdata.com/get-influxdb/) (currently I'm using version 2.10)
      - with a bucket and access token configured
-  1. [grafana](https://grafana.com/grafana/) (currentyl I'm using version 9.4.7) with
-     - a data source confgured to access the influxdb bucket
+  1. [grafana](https://grafana.com/grafana/) (currently I'm using version 9.4.7) with
+     - a data source configured to access the influxdb bucket
      - [dashboard](grafana_jkbms_battery.json) to display the battery values
 
 The three example configuration files are linked in this git repository for re-use.
